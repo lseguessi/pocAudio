@@ -52,8 +52,8 @@
     <Reference Include="NAudio, Version=1.10.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\NAudio.1.10.0\lib\net35\NAudio.dll</HintPath>
     </Reference>
-    <Reference Include="NAudio.Lame, Version=1.0.9.26885, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NAudio.Lame.1.0.9\lib\net40\NAudio.Lame.dll</HintPath>
+    <Reference Include="NAudio.Lame, Version=1.0.5.30726, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Lame.1.0.5\lib\net20\NAudio.Lame.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -172,8 +172,50 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="libmp3lame.64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="FFMPEG\bin\presets\libx264-veryslow_firstpass.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-veryslow.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-veryfast_firstpass.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-veryfast.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-ultrafast_firstpass.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-ultrafast.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-superfast_firstpass.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-superfast.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-slow_firstpass.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-slower_firstpass.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-slower.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-slow.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-placebo_firstpass.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-placebo.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-medium_firstpass.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-medium.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-main.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-lossless_ultrafast.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-lossless_slower.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-lossless_slow.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-lossless_medium.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-lossless_max.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-lossless_fast.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-ipod640.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-ipod320.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-fast_firstpass.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-faster_firstpass.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-faster.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-fast.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libx264-baseline.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libvpx-ultrafast.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libvpx-720p50_60.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libvpx-720p.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libvpx-360p.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libvpx-1080p50_60.ffpreset" />
+    <Content Include="FFMPEG\bin\presets\libvpx-1080p.ffpreset" />
+    <None Include="FFMPEG\bin\presets\ffprobe.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -248,9 +290,7 @@
       <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
-    <Error Condition="!Exists('..\packages\NAudio.Lame.1.0.9\build\NAudio.Lame.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NAudio.Lame.1.0.9\build\NAudio.Lame.targets'))" />
   </Target>
-  <Import Project="..\packages\NAudio.Lame.1.0.9\build\NAudio.Lame.targets" Condition="Exists('..\packages\NAudio.Lame.1.0.9\build\NAudio.Lame.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
